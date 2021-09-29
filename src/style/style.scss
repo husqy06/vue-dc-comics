@@ -2,6 +2,8 @@
 
 /* color */
 $brand-color: #0C7CEC;
+$main-background: #1C1C1C;
+$footer-background: #303030;
 /* / color */
 
 /* common */
@@ -13,6 +15,9 @@ $brand-color: #0C7CEC;
 }
 a {
     text-decoration: none;
+}
+ul {
+    list-style: none;
 }
 /* / common */
 
@@ -74,11 +79,197 @@ header {
 
 /* main */
 main {
+    background-color: $main-background;
+
     .jumbotron {
         width: 100%;
-        height: 400px;
+        height: 350px;
         background-image: url('../assets/img/jumbotron.jpg');
         background-size: cover;
     }
+
+    .series-container {
+        position: relative;
+        width: 80%;
+        margin: 0 auto;
+        padding-top: 40px;
+
+        .series-container-title {
+            position: absolute;
+            color: white;
+            text-transform: uppercase;
+            background-color: $brand-color;
+            padding: 10px 20px;
+            font-size: 25px;
+            font-weight: bold;
+            top: -30px;
+        }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+        
+            .serie-card {
+                display: inline-block;
+                position: relative;
+                width: 170px;
+                height: 220px;
+                background-color: lightblue;
+                margin: 10px 15px;
+                cursor: pointer;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .card-title {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 60px;
+                    display: flex;
+                    align-items: center;
+                    text-transform: uppercase;
+                    background-color: $main-background;
+                    color: white;
+                }
+            }
+        }
+        
+        .botton-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+
+            .botton-series {
+                text-transform: uppercase;
+                cursor: pointer;
+                color: white;
+                background-color: $brand-color;
+                margin: 10px;
+                font-size: 13px;
+                padding: 10px 50px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .main-bottom {
+        background-color: $brand-color;
+        
+        .main-bottom-container {
+            margin: 0 auto;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height: 150px;
+            text-transform: uppercase;
+            color: white;
+
+            div {
+                cursor: pointer;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                img {
+                    width: 50px;
+                    height: 100%;
+                    margin-right: 10px;
+                }
+            }
+        }
+        
+    }
 }
 /* / main */
+
+/* footer */
+footer {
+    .footer-top {
+        height: 350px;
+        background-image: url('../assets/img/footer-bg.jpg');
+
+        .footer-top-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0 auto;
+
+            .list-container {
+                display: flex;
+                height: 90%;
+                ul {
+                    margin: 0 20px;
+                    li {
+                        color: gray;
+                        font-size: 13px;
+                        margin: 5px 0;
+                        cursor: pointer;
+                        &:hover {
+                            color: $brand-color;
+                        }
+                    }
+                    .list-head {
+                        font-size: 20px;
+                        font-weight: bold;
+                        margin: 20px 0;
+                        color: white;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            img {
+                height: 470px;
+            }
+        }
+    }
+    .footer-bottom {
+        height: 110px;
+        background-color: $footer-background;
+
+        .footer-bottom-container {
+            height: 100%;
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+
+            .sign-bottom {
+                text-transform: uppercase;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                border: 2px solid $brand-color;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            .social-container {
+                display: flex;
+                align-items: center;
+                span {
+                    font-size: 20px;
+                    margin-right: 10px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: $brand-color;
+                }
+                img {
+                    margin-left: 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+/* / footer */
